@@ -6,6 +6,8 @@ import 'moment/locale/pt-br'
 
 import today_Image from "../../assets/imgs/today.jpg"
 
+import Task from "./components/Task"
+
 // cria uma classe padrão que será usada em outras partes do programa
 export default class TaskList extends Component{ // tem todas as características de um componente (herança)
     render(){
@@ -19,7 +21,9 @@ export default class TaskList extends Component{ // tem todas as característica
                     </View>
                 </ImageBackground>
                 <View style={styles.taskList}>
-                    <Text>Lista de tarefas</Text>
+                    <Task/>
+                    <Task/>
+                    <Task/>
                 </View>
             </View>
         )
