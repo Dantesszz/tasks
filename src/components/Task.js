@@ -9,9 +9,7 @@ export default props => {
         <View style={styles.container}>
             <TouchableWithoutFeedback onPress={() => alert("Olá")}>
                 <View style={styles.checkContainer}>
-                    <View style={styles.done}>
-                        <Icon name="check" size={20}></Icon>
-                    </View>
+                    {get_Chack_View(props.done_at)}
                 </View>
             </TouchableWithoutFeedback>
             <View>
@@ -21,6 +19,16 @@ export default props => {
             </View>
         </View>
     )
+}
+
+function get_Check_View(done_at){
+    if(done_at != null){
+        <View style={styles.done}>
+            <Icon name="check" size={20} color="#FFF"></Icon>
+        </View>
+    }else{
+        <View style={styles.pending}></View>
+    }
 }
 
 const styles = StyleSheet.create({
